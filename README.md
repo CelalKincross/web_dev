@@ -37,6 +37,13 @@ To do:
 - Working on React Keeper App
 - Section 1 to 18 were completed but not documented.
 
+Completed:
+- mapping practice
+- props practice
+- components practice
+- styling React components practive
+- React dev tools practice
+
 
 ## Acknowledgements
 - This project was inspired by [Angela Yu's Web Development course](https://appbrewery.com/).
