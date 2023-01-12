@@ -34,23 +34,19 @@ Project is: _in progress_
 ## Room for Improvement
 To do:
 - Section 19
-- Section 33: React Keeper App
-    - finished 391 to 416
-    - currently working on 417
+- Working on React Keeper App
+- Section 1 to 18 were completed but not documented.
 
 Completed:
-- Section 1 to 18 were completed but not documented in github
-
-Section 19 React
 - mapping practice
 - props practice
 - components practice
-- styling React components practice
+- styling React components practive
 - React dev tools practice
 
 
 ## Acknowledgements
-- This project is part of [Angela Yu's Web Development course](https://appbrewery.com/).
+- This project was inspired by [Angela Yu's Web Development course](https://appbrewery.com/).
 - Many thanks to...
 
 
