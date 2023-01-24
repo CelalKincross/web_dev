@@ -1,6 +1,6 @@
 // import React from 'react';
 
-const notes = [
+const notes1 = [
     {
         key:1,
         title: 'Arrays',
@@ -9,4 +9,4 @@ const notes = [
 ]
 
 
-export default notes;
+export default notes1;
