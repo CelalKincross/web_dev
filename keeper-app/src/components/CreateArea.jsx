@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
+import AddIcon from '@mui/icons-material/Add';
+import Fab from '@mui/material/Fab';
+import Zoom from '@mui/material/Zoom';
+
 
 function CreateArea(props) {
+    const [editMode, setEditMode] = useState(false);
     const [note, setNote] = useState({
         title: "",
         content: ""
@@ -17,7 +22,7 @@ function CreateArea(props) {
 
     return (
         <div>
-            <form onSubmit={(e)=>{
+            <form class="create-note" onSubmit={(e)=>{
                     props.addNote(note);
                     setNote({
                         title: "",
@@ -25,9 +30,26 @@ function CreateArea(props) {
                         })
                     e.preventDefault();
                     }}>
-                <input name='title' value={note.title} onChange={handleChanges} placeholder='Title' />
-                <textarea name='content' value={note.content} onChange={handleChanges} placeholder='Take notes...'/>
-                <button type="submit">Add</button>
+                {editMode && <input 
+                    name='title' 
+                    value={note.title} 
+                    onChange={handleChanges} 
+                    placeholder='Title' 
+                />}
+
+                <textarea 
+                    name='content' 
+                    value={note.content} 
+                    onChange={handleChanges} 
+                    placeholder='Take notes...'
+                    rows={editMode && 3}
+                    onClick={()=> setEditMode(true)}
+                />
+                <Zoom in={editMode}>
+                    <Fab type="submit">
+                        <AddIcon/>
+                    </Fab>
+                </Zoom>
             </form>
         </div>
     )
