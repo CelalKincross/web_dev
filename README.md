@@ -33,15 +33,16 @@ Project is: _in progress_
 
 ## Room for Improvement
 To do:
-- Section 19
-- Working on React Keeper App
-- Section 1 to 18 were completed but not documented.
+- move on to blockchain projects on Internet Computer
 
 Completed:
+- Section 19
+- Section 1 to 18 were completed but not documented.
+- React Keeper App
 - mapping practice
 - props practice
 - components practice
-- styling React components practive
+- styling React components practice
 - React dev tools practice
 
 
