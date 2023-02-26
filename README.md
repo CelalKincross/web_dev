@@ -44,7 +44,7 @@ Completed:
 - components practice
 - styling React components practice
 - React dev tools practice
-
+- Express practice
 
 ## Acknowledgements
 - This project was inspired by [Angela Yu's Web Development course](https://appbrewery.com/).
