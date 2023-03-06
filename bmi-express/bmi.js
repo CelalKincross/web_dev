@@ -1,5 +1,5 @@
-const bodyParser = require("body-parser")
-const url = bodyParser.urlencoded({extended:false})
+const bodyParser = require("body-parser");
+const url = bodyParser.urlencoded({extended:false});
 const express = require("express");
 const app = express();
 
