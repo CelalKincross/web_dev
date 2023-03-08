@@ -1,7 +1,9 @@
 const express = require("express");
 const https = require("https");
 const app = express();
+const bodyParser = require("body-parser")
 
+app.use(bodyParser.urlencoded({extended: false}));
 // var data = fetch("https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=metric&appid=${weatherApi}")
 // .then(data => {
 // return data.json();
@@ -11,8 +13,18 @@ const app = express();
 // });
 
 app.get("/", (req, res)=> {
-    var url =`https://api.openweathermap.org/data/2.5/weather?q=Toronto&units=metric&appid=${weatherAPI}`;
+    
+    res.sendFile(__dirname + "/index.html")
+    
+})
 
+app.post("/", (req, res) => {
+    console.log("post received")
+    console.log("CITY: " + req.body.city)
+    const cityName = req.body.city;
+    const weatherAPI = "anApiKey"
+    const url =`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${weatherAPI}`;
+    
     https.get(url, response => {
         console.log(response.statusCode);
         response.on("data", (data)=>{
@@ -31,13 +43,7 @@ app.get("/", (req, res)=> {
             res.send();
         })
     });
-    
 
-    // res.sendFile(__dirname + "/index.html")
-
-})
-
-app.post("/", (req, res) => {
 
 })
 app.listen(8080, ()=> {
