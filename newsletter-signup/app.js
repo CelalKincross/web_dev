@@ -33,6 +33,12 @@ app.post('/sign-up', (req, res) => {
         auth: 'Auser:apikey'
     }
     const request = https.request(url, options, function(response) {
+        if (response.statusCode === 200) {
+            res.send("Successfully subscribed");
+        
+        } else {
+            res.send("There was an error, please try again!");
+        }
         response.on("data", function(data) {
             console.log(JSON.parse(data));
         })
